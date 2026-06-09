@@ -109,24 +109,31 @@ Open **http://localhost:8000**
 
 ## Usage
 
-1. Create a subfolder inside `books/` for each book, place the chapter PDFs inside
+1. Add PDFs to `books/` — either a single file or a subfolder of chapters (see below)
 2. Click **Scan Books Folder** — the app discovers all books
 3. Click **Convert** on a book (or **Convert All**)
 4. Watch the status update in real time: `Discovered → Processing → Done`
 5. Click **Preview** to inspect the output, or find the `.md` file in `output/`
 
-### Expected folder structure
+### Supported folder structures
 
+**Single PDF** — drop the file directly in `books/`:
+```
+books/
+└── MyBook.pdf              → output/mybook.md
+```
+
+**Multi-chapter book** — one subfolder per book, PDFs inside:
 ```
 books/
 └── My Book Title/
     ├── Preface.pdf
     ├── Chapter 1 - Introduction.pdf
     ├── Chapter 2 - Core Concepts.pdf
-    └── Appendix.pdf
+    └── Appendix.pdf        → output/my_book_title.md (merged)
 ```
 
-Output: `output/my_book_title.md`
+Both formats can coexist in `books/` at the same time.
 
 ---
 
