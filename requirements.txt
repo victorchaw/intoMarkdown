@@ -1,0 +1,7 @@
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+sqlalchemy==2.0.36
+markitdown[pdf]==0.0.1a3
+openai==1.57.0
+python-dotenv==1.0.1
+aiofiles==24.1.0
